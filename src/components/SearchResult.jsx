@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import { fetchDataFromApi } from '../utils/api';
 import SearchedItemTemplate from './SearchedItemTemplate';
 import SearchedImageTemplate from './SearchedImageTemplate';
+import Pagination from './Pagination';
 const SearchResult = () => {
   const [result, setResult] = useState();
   const { query, startIndex } = useParams();
@@ -51,6 +52,7 @@ const { items, queries, searchInformation } = result;
                         ))}
                     </div>
                 )}
+                <Pagination queries={queries}/>
             </main>
             <Footer/>
     </div>
