@@ -3,10 +3,20 @@ import {AiOutlineSearch} from 'react-icons/ai'
 import {IoMdClose} from 'react-icons/io'
 import MicIcon from '../assets/mic.svg'
 import ImageIcon from '../assets/image.svg'
+import { useNavigate, useParams } from 'react-router-dom'
+
 
 
 const SearchInput = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+    const {query} = useParams()
+  const [searchQuery, setSearchQuery] = useState(query || "");
+  const navigate = useNavigate()
+  const searchQueryHandler =(e)=>{
+    if (e.key === 'Enter' && searchQuery.length > 0) {
+       navigate(`/${searchQuery}/${1}`) 
+    }
+  }
+  
   return (
     <div
     id="searchBox"
@@ -16,9 +26,7 @@ const SearchInput = () => {
     <input
         type="text"
         onChange={(e) => setSearchQuery(e.target.value)}
-        onKeyUp={(e)=> console.log(e.target.value)
-          // searchQuery
-        }
+        onKeyUp={searchQueryHandler}
         value={searchQuery}
         autoFocus
         className="grow outline-0 text-black/[0.87]"
