@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import SearchResultHeader from './SearchResultHeader'
-import Footer from './Footer';
-import { Context } from '../utils/ContextApi';
+import Footer from '../Footer';
 import { useParams } from 'react-router-dom';
-import { fetchDataFromApi } from '../utils/api';
+import { fetchDataFromApi } from '../../utils/api';
 import SearchedItemTemplate from './SearchedItemTemplate';
 import SearchedImageTemplate from './SearchedImageTemplate';
-import Pagination from './Pagination';
+import Pagination from '../Pagination';
+import { Context } from '../../utils/ContextApi';
+
 const SearchResult = () => {
   const [result, setResult] = useState();
   const { query, startIndex } = useParams();

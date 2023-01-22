@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ProfileIcon from "./ProfileIcon";
+import ProfileIcon from "../ProfileIcon";
 import SearchInput from "./SearchInput";
-import Logo from "../assets/google-logo.png";
-import { menu } from "../utils/Constants";
-import { Context } from "../utils/ContextApi";
+import Logo from "../../assets/google-logo.png";
+import { menu } from "../../utils/Constants";
+import { Context } from "../../utils/ContextApi";
 
 const SearchResultHeader = () => {
   const [selectedMenu, setSelectedMenu] = useState("All");

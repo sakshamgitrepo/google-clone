@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import SearchResult from "./components/SearchResult";
+import Home from "./components/Home-components/Home";
+import SearchResult from "./components/Search-components/SearchResult";
 import { AppContext } from "./utils/ContextApi";
 
 function App() {

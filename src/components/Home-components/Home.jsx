@@ -1,8 +1,8 @@
 import React from 'react'
 import HomeHeader from './HomeHeader'
-import Logo from "../assets/google-logo.png";
-import SearchInput from './SearchInput';
-import Footer from './Footer';
+import Logo from "../../assets/google-logo.png";
+import SearchInput from '../Search-components/SearchInput';
+import Footer from '../Footer';
 
 const Home = () => {
   return (

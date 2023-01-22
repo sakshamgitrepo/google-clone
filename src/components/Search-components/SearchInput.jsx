@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {IoMdClose} from 'react-icons/io'
-import MicIcon from '../assets/mic.svg'
-import ImageIcon from '../assets/image.svg'
+import MicIcon from '../../assets/mic.svg'
+import ImageIcon from '../../assets/image.svg'
 import { useNavigate, useParams } from 'react-router-dom'
 
 
